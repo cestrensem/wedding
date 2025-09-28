@@ -320,10 +320,10 @@ p {
 
 .bg-dark-image::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  height: 400%;
+  bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -484,8 +484,25 @@ p {
 	}
 }
 
+.timer h2 {
+  margin-top: 0;
+}
+
 @media (min-width: 1024px) {
   .last-layout {
     transform: scale(1.5);
   }
 }
+
+@media (max-width: 719px) {
+  .scroll-container {
+    scroll-snap-type: none;
+    height: auto;
+  }
+
+  .scroll-section {
+    scroll-snap-align: none;
+    height: auto;
+  }
+}
+
