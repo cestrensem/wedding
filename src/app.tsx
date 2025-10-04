@@ -1,23 +1,28 @@
 import './app.css'
 import { Countdown } from './containers/coundown'
+import { useIsDesktop } from './hooks/useIsDesktop'
 
 const BARN_MAP_URL = 'https://yandex.com/map-widget/v1/?ll=20.467853%2C54.709127&mode=search&oid=70946816597&ol=biz&sctx=ZAAAAAgBEAAaKAoSCWiu00hLeTRAEXf1KjI6WktAEhIJUwd5PZgU1z8REHo2qz5Xwz8iBgABAgMEBSgKOABAh6ANSAFqBXdvcmxknQHNzMw9oAEAqAEAvQGiSNopwgEG1YSKpogCggIQS2FsaW5pbmdyYWQgYmFybooCAJICAjIymgIMZGVza3RvcC1tYXBz&sll=20.467853%2C54.709127&sspn=0.011348%2C0.004754&text=Kaliningrad%20barn&z=17.17'
 
 const INVITATION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSewY3tZKTfM94QfDlWDGSpVma8wiHMed5oya-yu7ZTi-CP08Q/viewform?usp=header'
 
 export const App = () => {
+  const isDesktop = useIsDesktop()
+
   return (
     <main className="scroll-container bg-dark-image">
       <section className="scroll-section bg-dark">
         <article className="hero">
           <h3 className="time text">29 августа 2026</h3>
           <h1 className="neon-text-black title">Андрей и Кристина</h1>
-          <div className="hero-image"></div>
+          <div className="hero-image-wrapper">
+            <div className="hero-image"></div>
+          </div>
         </article>
         <article className="description">
           <h2 className="title">Мы счастливы пригласить тебя на нашу свадебную вечеринку!</h2>
-          <p className="text">Этот вечер будет полон стиля, дерзости, свободы, безудержного веселья, танцев, искусства и конечно же, любви.<br/>Ждём тебя, чтобы зажечь вместе и сделать этот праздник ярким и незабываемым!</p>
-          <div class="mouse"></div>
+          <p className="text">Этот вечер будет полон стиля, дерзости, свободы, безудержного веселья, танцев, искусства и конечно же, любви.{isDesktop ? <br/> : ' '}Ждём тебя, чтобы зажечь вместе и сделать этот праздник ярким и незабываемым!</p>
+          {isDesktop && <div className="mouse"></div>}
         </article>
       </section>
       <section className="scroll-section bg-dark">

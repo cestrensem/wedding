@@ -253,8 +253,8 @@ h1 {
 
 h2 {
   font-size: 48px;
-  line-height: 64px;
-  margin: 40px 0 8px;
+  line-height: 40px;
+  margin: 40px 0 16px;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
@@ -494,6 +494,83 @@ p {
   }
 }
 
+@media (max-width: 1023px) and (min-width: 720px) {
+  .scroll-container {
+    scroll-snap-type: none;
+    height: auto;
+  }
+
+  .scroll-section {
+    scroll-snap-align: none;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .mouse {
+    display: none;
+  }
+
+  .time {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .description h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .description p {
+    line-height: 22px;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .location {
+    margin-top: 40px;
+  }
+
+  .dresscode {
+    min-height: 100vh;
+  }
+  
+  .dresscode-item-header-text .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .dresscode-item-header {
+    padding: 12px;
+  }
+
+  .dresscode-item-header-color {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dresscode-item-header-text .text {
+    font-size: 14px;
+  }
+  
+  .location iframe {
+    width: 60vw;
+    height: 45vw;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+
 @media (max-width: 719px) {
   .scroll-container {
     scroll-snap-type: none;
@@ -503,6 +580,119 @@ p {
   .scroll-section {
     scroll-snap-align: none;
     height: auto;
+    padding: 24px 0;
+  }
+
+  .time {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .hero-image-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    max-width: 480px;
+    padding-top: 66%;
+    height: 0;
+  }
+
+  .mouse {
+    display: none;
+  }
+
+  .description h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .description p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .dresscode-list {
+    display: block;
+  }
+
+  .dresscode-item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .dresscode-item-header-color {
+    width: 72px;
+    height: 72px;
+  }
+
+  .dresscode-item-header {
+    padding: 8px;
+  }
+
+  .dresscode-item-header-text .title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .dresscode-item-header-text .text {
+    font-size: 14px;
+  }
+
+  .dresscode-item-content-light, .dresscode-item-content-dark {
+    padding-top: 166%;
+  }
+
+  iframe {
+    width: 100vw;
+    height: 60vw;
+    aspect-ratio: 16 / 9;
+  }
+
+  .last-layout {
+    margin: 24px 0;
+  }
+
+  .countdown-header {
+    font-size: 40px;
+  }
+
+  .countdown-separator {
+    width: 32px;
+  }
+
+  .countdown-number {
+    min-width: 56px;
+  }
+
+  .countdown-caption-item {
+    width: 56px;
+    margin: 0 16px;
+  }
+
+  .countdown-number:first-child, .countdown-caption-item:first-child {
+    width: 80px;
+  }
+
+  .button {
+    font-size: 24px;
+    padding: 8px 16px;
   }
 }
 
